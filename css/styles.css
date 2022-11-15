@@ -9,8 +9,9 @@ body {
 
 
 .container {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
+    justify-content: space-between; */
     background-color: #121212;
     width: 100vw;
     min-height: 100vh;
@@ -78,6 +79,19 @@ form {
     width: 30%;
 }
 
+main {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.exploring-message {
+    color: #4B4B4B;
+    font-size: 1.3rem;
+}
+
 
 @media (max-width:280px) {
     header {
@@ -122,11 +136,11 @@ form {
     }
 
     .search {
-        width: 80%;
+        width: 75%;
     }
 
     .btn-search {
-        width: 20%;
+        width: 25%;
     }
 
     .title {
