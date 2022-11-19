@@ -20,7 +20,7 @@ body {
 }
 
 header {
-    color: #fff;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,6 +30,7 @@ header {
     background-blend-mode: multiply;
     height: 200px;
     padding: 0 1rem;
+    text-shadow: 1px 1px 3px #000;
 }
 
 .title {
@@ -39,7 +40,7 @@ header {
 }
 
 .header-link {
-    color: #fff;
+    color: #c5c5c5;
     text-decoration: none;
     font-weight: bold;
 }
