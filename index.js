@@ -31,32 +31,31 @@ function renderMovies() {
         fetch(`https://www.omdbapi.com/?apikey=72add8e3&i=${id}`)
             .then(res => res.json())
             .then(data => {
-                movieHtml += `<div>
-                            <h3>${data.Title}</h3>
-                            <p>${data.Runtime}</p>
+                movieHtml += `
+                    <div class="search-result">
+                        <img class="movie-poster" src="${data.Poster}">
+                        <div class="movie-info">
+                            <div class="movie-header">
+                                <h3 class="movie-title">${data.Title}</h3>
+                                <p><img src="./images/star.png"> ${data.imdbRating}</p>
+                            </div>
+                            <div class="movie-sub-info">
+                                <p>${data.Genre}</p>
+                                <p>${data.Runtime}</p>
+                                <div class="add-watchlist">
+                                    <img class="icon" src="./images/plus.png">
+                                    <p>Watchlist</p>
+                                </div>
+                            </div>
+                            <p class="plot">${data.Plot}</p>
                         </div>
-                        `
-                // console.log("Title:", data.Title)
-                // console.log("IMDB Rating:", data.imdbRating)
-                // console.log("Runtime:", data.Runtime)
-                // console.log("Genre:", data.Genre)
-                // console.log("Plot:", data.Plot)
+                    </div>
+                    <hr class="divider">
+                    `
                 console.log(movieHtml)
                 mainContent.innerHTML = movieHtml
             })
             
         })
+    imdbMovieList = [] 
 }
-
-// When search button is clicked:
-// - it will fetch the movie list from the API
-// - checks if something comes back. If not display on page
-// - if true get the 10 items and store their imdbID  in an array?
-// - fetch all imdb data and render them to the page. 
-
-// imdbID.Title
-// imdbID.imdbRating
-// imdbID.Runtime
-// imdbID.Genre
-// imdbID.Plot
-// imdbID.Poster
