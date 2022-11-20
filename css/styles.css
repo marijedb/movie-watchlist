@@ -3,7 +3,7 @@
 }
 
 body {
-    color: #fff;
+    color: #eeeeee;
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
@@ -13,15 +13,20 @@ p {
     font-size: .6rem;
 }
 
+
+/* MAIN CONTAINER */
+
 .container {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
     background-color: #121212;
     width: 100vw;
     min-height: 100vh;
     margin: 0 auto;
 }
+
+
+
+
+/**** HEADER SECTION ****/
 
 header {
     color: #ffffff;
@@ -85,6 +90,14 @@ form {
     width: 30%;
 }
 
+
+
+
+
+
+
+/**** MAIN SECTION ****/
+
 main {
     margin-top: 100px;
     display: flex;
@@ -93,12 +106,17 @@ main {
     justify-content: center;
 }
 
+/* Starting message */
+
 .exploring-message {
     color: #4B4B4B;
     font-size: 1.3rem;
 }
 
-.search-result {
+
+/* search results layout */
+
+.search-result-container {
     display: flex;
     width: 90%;
 }
@@ -110,7 +128,6 @@ main {
 
 .movie-header {
     display: flex;
-    justify-content: space-between;
 }
 
 .movie-info {
@@ -121,7 +138,10 @@ main {
 
 .movie-sub-info {
     display: flex;
-    justify-content: space-between;
+}
+
+.runtime-info {
+    margin: 0 1rem;
 }
 
 .icon {
@@ -136,7 +156,7 @@ main {
 
 .movie-title {
     font-size: .7rem;
-    margin: 0;
+    margin: 0 1rem 0 0;
 }
 
 .plot {
@@ -151,7 +171,14 @@ main {
 }
 
 
-@media (max-width:280px) {
+
+
+
+/**** MEDIA QUERIES ****/
+
+@media (max-width:300px) {
+
+    /**** HEADER SECTION ****/
     header {
         padding: 0 .5rem;
     }
@@ -175,15 +202,28 @@ main {
     .header-link {
         font-size: .7rem;
     }
+
+    /**** MAIN SECTION ****/
+
+    .movie-poster {
+        width: 80px;
+        align-self: center;
+    }
 }   
 
 
 
 
 @media (min-width: 540px){
+    p {
+        font-size: 0.8rem;
+    }
+
     .container {
         max-width: 100vw;
     }
+
+    /**** HEADER SECTION ****/
 
     header {
         padding: 0 4rem;
@@ -191,6 +231,10 @@ main {
 
     form {
         max-width: 60%;
+    }
+    
+    .title {
+        font-size: 2.5rem;
     }
 
     .search {
@@ -201,7 +245,23 @@ main {
         width: 25%;
     }
 
-    .title {
-        font-size: 2.5rem;
+    /**** MAIN SECTION ****/
+
+    .search-result-container {
+        width: 500px;
     }
+
+    .movie-poster {
+        width: 120px;
+    }
+
+    .movie-title {
+        font-size: 1rem;
+    }
+
+    .divider {
+        max-width: 500px;
+    }
+
+
 }

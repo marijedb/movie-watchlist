@@ -32,7 +32,7 @@ function renderMovies() {
             .then(res => res.json())
             .then(data => {
                 movieHtml += `
-                    <div class="search-result">
+                    <div class="search-result-container">
                         <img class="movie-poster" src="${data.Poster}">
                         <div class="movie-info">
                             <div class="movie-header">
@@ -41,7 +41,7 @@ function renderMovies() {
                             </div>
                             <div class="movie-sub-info">
                                 <p>${data.Genre}</p>
-                                <p>${data.Runtime}</p>
+                                <p class="runtime-info">${data.Runtime}</p>
                                 <div class="add-watchlist">
                                     <img class="icon" src="./images/plus.png">
                                     <p>Watchlist</p>
