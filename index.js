@@ -3,6 +3,7 @@ const btnSearch = document.getElementById('btn-search')
 const mainContent = document.getElementById('main')
 
 let imdbMovieList = []
+let myMovieList = []
 let watchList = []
 
 btnSearch.addEventListener("click", getMovieId)
@@ -10,9 +11,6 @@ btnSearch.addEventListener("click", getMovieId)
 document.addEventListener("click", function(event){
     if(event.target.dataset.id){
         addToWatchlist(event.target.dataset.id)
-    } else if(event.target.dataset.watchlist){
-        let test = JSON.parse(localStorage.getItem("movies"))
-        console.log(test)
     }
 })
 
