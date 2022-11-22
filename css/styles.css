@@ -120,6 +120,16 @@ main {
 }
 
 
+/* error message */
+
+.error-msg {
+    color: #686868;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+
+
 /* search results layout */
 
 .search-result-container {
@@ -212,6 +222,15 @@ main {
 .search-message:hover {
     font-size: 1.3rem;
 }
+
+
+
+/* UTILITY CLASSES */
+
+.centered {
+    text-align: center;
+}
+
 
 
 /**** MEDIA QUERIES ****/

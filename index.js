@@ -21,6 +21,11 @@ function getMovieId(event) {
         .then(response => response.json())
         .then(data => {
             if (!data.Search) {
+                if(data.Error === "Movie not found!"){
+                    mainContent.innerHTML = `<p class="error-msg centered">Movie not found. Please try other keywords. </p>`
+                } else if (data.Error === "Too many results.") {
+                    mainContent.innerHTML = `<p class="error-msg centered">Too many results. Please narrow down your search.</p>`
+                }
                 console.log(data.Error)
             } else {
                 for (movie of data.Search) {
