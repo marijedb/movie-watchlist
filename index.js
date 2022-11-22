@@ -26,7 +26,6 @@ function getMovieId(event) {
                 } else if (data.Error === "Too many results.") {
                     mainContent.innerHTML = `<p class="error-msg centered">Too many results. Please narrow down your search.</p>`
                 }
-                console.log(data.Error)
             } else {
                 for (movie of data.Search) {
                     imdbMovieList.push(movie.imdbID)
