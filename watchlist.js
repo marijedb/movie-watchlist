@@ -29,14 +29,12 @@ function deleteMovie(movieID) {
         }
     }
     renderWatchList()
-
 }
 
 
 function getWatchListHtml() {
     let watchlistHtml = ``
     watchList.forEach(function (movie) {
-        console.log(movie)
         watchlistHtml += `
                     <div class="search-result-container">
                         <img class="movie-poster" src="${movie.Poster}">
