@@ -21,7 +21,7 @@ function renderWatchList(){
                             <div class="movie-sub-info">
                                 <p>${data.Genre}</p>
                                 <p class="runtime-info">${data.Runtime}</p>
-                                <div id="${movieId}" class="add-watchlist">
+                                <div id="${movieId}" class="remove-watchlist">
                                     <img class="icon" src="./images/minus.png" data-id="${movieId}">
                                     <p data-id="${movieId}">Delete</p>
                                 </div>

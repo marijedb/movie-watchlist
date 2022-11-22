@@ -36,7 +36,9 @@ function getMovieId(event) {
 function addToWatchlist(movieID){
     watchList.push(movieID)
     localStorage.setItem("movies", JSON.stringify(watchList));
-    document.getElementById(`${movieID}`).innerHTML = `<p class="added-msg">Added to watchlist</p>`
+    document.getElementById(`${movieID}`).innerHTML = `
+        <img class="icon" src="./images/check-mark.png">
+        <p class="added-msg">Added</p>`
 }
 
 
@@ -83,8 +85,9 @@ function renderMovies() {
                                 <div class="movie-sub-info">
                                     <p>${data.Genre}</p>
                                     <p class="runtime-info">${data.Runtime}</p>
-                                    <div id="${id}" class="add-watchlist">
-                                        <p class="added-msg">Added to watchlist</p>
+                                    <div id="${id}" class="added-watchlist">
+                                        <img class="icon" src="./images/check-mark.png">
+                                        <p class="added-msg">Added</p>
                                     </div>
                                 </div>
                                 <p class="plot">${data.Plot}</p>

@@ -54,6 +54,11 @@ header {
     font-weight: bold;
 }
 
+.header-link:hover,
+.header-link:focus {
+    color: #ffffff;
+}
+
 form {
     position: absolute;
     top: 180px;
@@ -109,7 +114,7 @@ main {
 /* Starting message */
 
 .exploring-message {
-    color: #4B4B4B;
+    color: #686868;
     font-size: 1.3rem;
     margin-top: 1rem;
 }
@@ -157,7 +162,24 @@ main {
 
 .add-watchlist:hover,
 .add-watchlist:focus {
-    color: #be2525
+    color: #00a010;
+    cursor: pointer;
+}
+
+.remove-watchlist {
+    display: flex;
+    align-items: center;
+}
+
+.remove-watchlist:hover,
+.remove-watchlist:focus {
+    color: #e20606;
+    cursor: pointer;
+}
+
+.added-watchlist {
+    display: flex;
+    align-items: center;
 }
 
 .movie-title {
@@ -177,9 +199,19 @@ main {
 }
 
 .added-msg {
-    color: #f5f78a;
+    color: #b3b3b3;
 }
 
+.search-message {
+    margin-top: 1rem;
+    color: #686868;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.search-message:hover {
+    font-size: 1.3rem;
+}
 
 
 /**** MEDIA QUERIES ****/
